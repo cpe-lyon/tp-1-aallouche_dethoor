@@ -52,21 +52,18 @@
    
 10. La commande 'file' permet de determiner la nature d'un fichier. "file plop --> ASCII text"
 
-11. 
-echo 'Hello Toto!' > toto 
+11. echo 'Hello Toto!' > toto 
 ln toto titi --> raccourci toto vers titi
 Lorsque je modifie toto, titi est automatiquement modifié. Supprimer l'original ne supprime pas la copie.
 
-12. 
-echo 'Hello Titi!' > titi
+12. echo 'Hello Titi!' > titi
 ln -s titi tutu --> raccourci titi vers tutu
 Lorsque je modifie titi, tutu
 est automatiquement modifié. Supprimer l'original ne supprime pas la copie.
 
 13.
 
-14.
-Pour afficher les 15 dernieres lignes --> tail -n 15 /var/log/syslog
+14.Pour afficher les 15 dernieres lignes --> tail -n 15 /var/log/syslog
 Pour afficher les 5 premieres lignes --> head -n 5 /var/log/syslog
 Pour afficher les lignes 10 à 20 --> head -n 5 /var/log/syslog | tail -n 10 /var/log/syslog
 
