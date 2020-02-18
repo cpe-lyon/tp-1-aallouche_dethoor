@@ -61,42 +61,32 @@ ln -s titi tutu --> raccourci titi vers tutu
 Lorsque je modifie titi, tutu
 est automatiquement modifié. Supprimer l'original ne supprime pas la copie.
 
-13.
+13.more /var/log/syslog et appuyer sur espace pour continuer d’afficher
 
-14.
-Pour afficher les 15 dernieres lignes --> tail -n 15 /var/log/syslog
+14.Pour afficher les 15 dernieres lignes --> tail -n 15 /var/log/syslog
 Pour afficher les 5 premieres lignes --> head -n 5 /var/log/syslog
 Pour afficher les lignes 10 à 20 --> head -n 5 /var/log/syslog | tail -n 10 /var/log/syslog
 
-15.
-dmesg est une commande sur les systèmes d'exploitation de type Unix qui affiche la mémoire tampon de message du noyau less est une commande Unix permettant de visualiser un fichier texte page par page (sans le modifier). Sa fonction est similaire à la commande more, mais permet en plus de revenir en arrière ou de rechercher une chaîne. dmesg | less → affiche mem tampon, on peut aller en avant et en arriere page par page.
+15.dmesg est une commande sur les systèmes d'exploitation de type Unix qui affiche la mémoire tampon de message du noyau less est une commande Unix permettant de visualiser un fichier texte page par page (sans le modifier). Sa fonction est similaire à la commande more, mais permet en plus de revenir en arrière ou de rechercher une chaîne. dmesg | less → affiche mem tampon, on peut aller en avant et en arriere page par page.
 
-16.
-/etc/passwd → fichier mdp user man passwd
+16./etc/passwd → fichier mdp user man passwd
 
-17.
-afficher 1ere colonne par ordre alphabétique inverse → sort -k1dr 
+17.afficher 1ere colonne par ordre alphabétique inverse → sort -k1dr 
 
-18.
-cat /etc/passwd | awk -F: '{print $ 1}' → affiche les users
+18.cat /etc/passwd | awk -F: '{print $ 1}' → affiche les users
 
 19.
 apropos est une commande Unix qui permet de lister les manuels dont la description comprend les mots passés en arguments. apropos conversion
 
-20.
-find -name passwd → à la racine pour trouver touts les fichiers nommés passwd
+20.find -name passwd → à la racine pour trouver touts les fichiers nommés passwd
  
-21.
-find -name passwd > ~/list_passwd_files.txt 2> /dev/null
+21.find -name passwd > ~/list_passwd_files.txt 2> /dev/null
 
-22.
-sort /home/js/.bashrc | grep ll → cherche ou est def alias ll
+22.sort /home/js/.bashrc | grep ll → cherche ou est def alias ll
 
-23.
-locate .history → localise fichier history.log
+23.locate .history → localise fichier history.log
 
-24.
-pour les fichiers récents il faut faire updatedb, puis on fait le locate.
+24.pour les fichiers récents il faut faire updatedb, puis on fait le locate.
 
 ## Découverte de l’éditeur de texte nano
 
@@ -104,11 +94,9 @@ F1 ou Ctrl + G Affichage de l’aide Ctrl + X Quitter nano / Fermer une fenêtre
 
 ## Personnalisation du shell
 
-1. 
-Pour créer une copie du bash il suffit de faire cp .bashrc .bashrc_bak
+1. Pour créer une copie du bash il suffit de faire cp .bashrc .bashrc_bak
 
-2. 
-Pour décommenter la ligne force_color_prompt=yes il faut :
+2. Pour décommenter la ligne force_color_prompt=yes il faut :
 
     * nano .bashrc
     * enlever le # de force_color_prompt=yes
@@ -116,11 +104,9 @@ Pour décommenter la ligne force_color_prompt=yes il faut :
     * Y pour sauvegarder
     * Entrer pour valider
 
-3. 
-Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter puis se reconnecter ; mais il existe un autre moyen : la commande _source .bashrc _. L’invite de commande devrait immédiatement passer en couleurs.
+3. Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter puis se reconnecter ; mais il existe un autre moyen : la commande _source .bashrc _. L’invite de commande devrait immédiatement passer en couleurs.
 
-4. 
-Modifiez l’invite de commande pour qu’elle s’affiche sous la forme suivante :
+4. Modifiez l’invite de commande pour qu’elle s’affiche sous la forme suivante :
 
     * nano .bashrc
     * remplacer la ligne par : PS1='${debian_chroot:+($debian_chroot)}\033[91m][\A] \033[00m]- [\033[01;32m]\u@\h[\033[00m]:[\033[01;36m]\w[\033[00m]$ '
