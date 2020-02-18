@@ -104,9 +104,11 @@ F1 ou Ctrl + G Affichage de l’aide Ctrl + X Quitter nano / Fermer une fenêtre
 
 ## Personnalisation du shell
 
-1. Pour créer une copie du bash il suffit de faire cp .bashrc .bashrc_bak
+1. 
+Pour créer une copie du bash il suffit de faire cp .bashrc .bashrc_bak
 
-2. Pour décommenter la ligne force_color_prompt=yes il faut :
+2. 
+Pour décommenter la ligne force_color_prompt=yes il faut :
 
     * nano .bashrc
     * enlever le # de force_color_prompt=yes
@@ -114,9 +116,11 @@ F1 ou Ctrl + G Affichage de l’aide Ctrl + X Quitter nano / Fermer une fenêtre
     * Y pour sauvegarder
     * Entrer pour valider
 
-3. Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter puis se reconnecter ; mais il existe un autre moyen : la commande _source .bashrc _. L’invite de commande devrait immédiatement passer en couleurs.
+3. 
+Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter puis se reconnecter ; mais il existe un autre moyen : la commande _source .bashrc _. L’invite de commande devrait immédiatement passer en couleurs.
 
-4. Modifiez l’invite de commande pour qu’elle s’affiche sous la forme suivante :
+4. 
+Modifiez l’invite de commande pour qu’elle s’affiche sous la forme suivante :
 
     * nano .bashrc
     * remplacer la ligne par : PS1='${debian_chroot:+($debian_chroot)}\033[91m][\A] \033[00m]- [\033[01;32m]\u@\h[\033[00m]:[\033[01;36m]\w[\033[00m]$ '
